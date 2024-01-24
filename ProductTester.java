@@ -36,17 +36,16 @@ public class ProductTester {
 
                 p[i] = new Product(number, name, price, stock);
             }
-            // show product
-            for (Product pro : p) {
-                System.out.println(pro.toString());
-                System.out.println("---------------------------");
-            }
-
-            for (int j = 0; j < maxSize; j++) {
-                System.out.println(p[j].toString());
-                System.out.println("---------------------------");
-            }
+            displayInventory(p);
         }
         in.nextLine();
+    }
+
+    public static void displayInventory(Product[] p) {
+        // show product
+        for (Product pro : p) {
+            System.out.println(pro.toString());
+            System.out.println("---------------------------");
+        }
     }
 }
